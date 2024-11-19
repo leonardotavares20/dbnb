@@ -15,6 +15,7 @@ export default {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
                 krona: ["Krona One", "sans-serif"],
+                jost: ["Jost", "sans-serif"],
             },
         },
     },
