@@ -1,7 +1,8 @@
 <script lang="ts">
     import Header from "../components/header/header.svelte";
-
-    export let message;
+    import Nav from "../components/header/nav.svelte";
 </script>
 
-<Header />
+<Header>
+    <Nav />
+</Header>
