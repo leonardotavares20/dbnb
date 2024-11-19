@@ -6,7 +6,7 @@
 
 <input
     type="text"
-    class="border rounded-full max-w-[560px] min-h-[70px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-center"
+    class="border uppercase border-[#B8B8B8] rounded-full font-jost max-w-[560px] min-w-[200px] min-h-[70px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-center"
     bind:value
     {id}
     {placeholder}
