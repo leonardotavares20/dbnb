@@ -9,3 +9,7 @@ Route::get('/', function () {
         'message' => $message
     ]);
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
