@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Krona+One&display=swap" rel="stylesheet">
     @vite('resources/js/app.js')
-    <title>{{ $title ?? 'Título Padrão' }}</title>
+    <title>@yield('title', 'Título Padrão')</title>
   </head>
   <body class="font-krona h-full">
       @yield('content')

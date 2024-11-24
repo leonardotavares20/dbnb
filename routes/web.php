@@ -11,5 +11,43 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about', data: [
+        'jobs' => [
+            [
+                'title' => 'Software Engineer',
+                'salary' => '$100,000',
+            ],
+            [
+                'title' => 'Teacher',
+                'salary' => '$80,000',
+            ],
+            [
+                'title' => 'Manager',
+                'salary' => '$120,000',
+            ],
+        ]
+    ]);
+});
+
+Route::get('/jobs', action: function() {
+    return view('jobs', data: [
+        'jobs' => [
+            [
+                'title' => 'Software Engineer',
+                'salary' => '$100,000',
+            ],
+            [
+                'title' => 'Teacher',
+                'salary' => '$80,000',
+            ],
+            [
+                'title' => 'Manager',
+                'salary' => '$120,000',
+            ],
+        ]
+    ]);
+});
+
+Route::get('/contact', function () {
+    return view('contact');
 });

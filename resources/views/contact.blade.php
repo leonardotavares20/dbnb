@@ -4,5 +4,5 @@
 
 <x-nav />
 @section('content')
-    <h1 class="text-3xl">About page</h1>
+    <h1 class="text-3xl">Contact page</h1>
 @endsection
