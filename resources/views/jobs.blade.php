@@ -5,11 +5,11 @@
 <x-nav />
 @section('content')
     <h1 class="text-3xl">Jobs page</h1>
-    @foreach ($jobs as $job)
-        <ul>
-            <a href="{{ route('job', ['id' => $job['id']]) }}">
-                <li><strong>{{ $job['title'] }}</strong> pays: {{ $job['salary'] }} per year</li>
+    <ul class="mt-10 flex flex-col gap-3">
+        @foreach ($jobs as $job)
+            <a class="text-lg text-blue-400 underline-offset-[6px] hover:underline" href="job/{{ $job['id'] }}">
+                <li><strong>{{ $job['title'] }}</strong></li>
             </a>
-        </ul>
-    @endforeach
+        @endforeach
+    </ul>
 @endsection

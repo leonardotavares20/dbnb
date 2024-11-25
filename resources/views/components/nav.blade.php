@@ -1,4 +1,4 @@
-<nav>
+<nav class="p-10 gap-5 flex">
     <x-nav-link href="/"
                 type="a"
                 :active="request()->is('/')">Home</x-nav-link>
