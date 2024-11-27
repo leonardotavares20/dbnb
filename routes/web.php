@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Arr;
 use Inertia\Inertia;
+use App\Models\Job;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,70 +11,20 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/about', function () {
+Route::get('/about', function ()  {
     return view('about', data: [
-        'jobs' => [
-            [
-                'id' => 1,
-                'title' => 'Software Engineer',
-                'salary' => '$100,000',
-            ],
-            [
-                'id'=> 2,
-                'title' => 'Teacher',
-                'salary' => '$80,000',
-            ],
-            [
-                'id'=> 3,
-                'title' => 'Manager',
-                'salary' => '$120,000',
-            ],
-        ]
+        'jobs' => Job::all()
     ]);
 });
 
-Route::get('/jobs', action: function() {
+Route::get('/jobs', action: function()  {
     return view('jobs', data: [
-        'jobs' => [
-            [
-                'id' => 1,
-                'title' => 'Software Engineer',
-                'salary' => '$100,000',
-            ],
-            [
-                'id' => 2,
-                'title' => 'Teacher',
-                'salary' => '$80,000',
-            ],
-            [
-                'id' => 3,
-                'title' => 'Manager',
-                'salary' => '$120,000',
-            ],
-        ]
+        'jobs' => Job::all()
     ]);
 });
 
-Route::get('/job/{id}',function ($id) {    
-    $jobs = [
-        [
-            'id' => 1,
-            'title' => 'Software Engineer',
-            'salary' => '$100,000',
-        ],
-        [
-            'id'=> 2,
-            'title' => 'Teacher',
-            'salary' => '$80,000',
-        ],
-        [
-            'id'=> 3,
-            'title' => 'Manager',
-            'salary' => '$120,000',
-        ],
-    ];
-
-   $job = Arr::first($jobs, fn ($job) => $job['id'] == $id);
+Route::get('/job/{id}',function ($id) { 
+    $job = Job::find($id);
 
     return view('job', data: [
         'job' => $job

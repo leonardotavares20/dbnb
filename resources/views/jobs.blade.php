@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+o
 @section('title', 'Jobs')
 
 <x-nav />

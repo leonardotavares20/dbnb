@@ -15,7 +15,7 @@
     <div class="w-full flex justify-center px-10">
         <menu class="flex gap-x-8 uppercase">
             <a href="/">HOME</a>
-            <a href="/">ABOUT</a>
+            <a href="/about">ABOUT</a>
             <a href="/">COLLECTION</a>
         </menu>
     </div>
